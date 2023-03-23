@@ -1,12 +1,8 @@
-# Proyect My Training realizado junto a mi compañero Armando Neira.
-
 # My-Training 
 Aplicación móvil para fomentar la actividad física en lo cual ==>
   - Podras ver diferentes ejercicios para tu cuerpo.
   - Podras calcular tu IMC, es decir tu índice de masa corporal y por ultimo.
   - Podras tener una lista de tus ejercicios preferidos.
-
-
 
 
 
@@ -34,3 +30,5 @@ ionic serve --lab
 ![MyTrainingApp1](./src/assets/img/MyTraining1.png)
 ![MyTrainingApp2](./src/assets/img/MyTraining2.png)
 ![MyTrainingApp3](./src/assets/img/MyTraining3.png)
+
+Proyect My Training realizado junto a mi compañero Armando Neira.
