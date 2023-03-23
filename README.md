@@ -6,9 +6,6 @@ Aplicación móvil para fomentar la actividad física.
 
 
 
-![MyTrainingApp1](./src/assets/img/MyTraining1.png)
-![MyTrainingApp2](./src/assets/img/MyTraining2.png)
-![MyTrainingApp3](./src/assets/img/MyTraining3.png)
 
 
 ## Importante 
@@ -31,3 +28,7 @@ ionic serve
 ```bash
 ionic serve --lab
 ```
+
+![MyTrainingApp1](./src/assets/img/MyTraining1.png)
+![MyTrainingApp2](./src/assets/img/MyTraining2.png)
+![MyTrainingApp3](./src/assets/img/MyTraining3.png)
