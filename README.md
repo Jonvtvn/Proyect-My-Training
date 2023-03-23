@@ -4,6 +4,13 @@
 Aplicación móvil para fomentar la actividad física.
 
 
+
+
+![MyTrainingApp1](./src/assets/img/MyTraining1.png)
+![MyTrainingApp2](./src/assets/img/MyTraining2.png)
+![MyTrainingApp3](./src/assets/img/MyTraining3.png)
+
+
 ## Importante 
 Debe remplazar SRC dentro de una aplicación de IONIC-ANGULAR, ojo también usted debera instalar dentro de la carpeta de la aplicación mediante el CMD lo que sale a continuacion:
 
