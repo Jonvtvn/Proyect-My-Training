@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Inicia Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+    <img src="/assets/img/login.jpg" class="img-login">
+
+    <form class="form-login" #formulario="ngForm" (ngSubmit) ="ingresarValidar()">
+
+      <ion-item color="dark">
+        <ion-label class="fuente-login" position="floating">Correo Electrónico</ion-label>
+        <ion-input class="fuente-login" type="email" name="email" [(ngModel)]= "usuario.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" maxlength="27" required></ion-input>
+      </ion-item>
+
+      <ion-item color="dark">
+        <ion-label class="fuente-login" position="floating">Contraseña</ion-label>
+        <ion-input class="fuente-login" [type]="passwordType" name="password" [(ngModel)]= "usuario.password" maxlength="27" minlength="4" required></ion-input>
+        <ion-icon class="icon-login" [name]="iconEye" slot="end" [color]="colorEye" (click)="mostrar()"></ion-icon>
+      </ion-item>
+
+      <ion-button *ngIf="formulario.invalid; else valido" class="fuente-login" [disabled]="formulario.invalid" type="submit" expand="block" color="danger">
+        Iniciar Sesión
+      </ion-button>
+      
+      <ng-template #valido>
+        <ion-button class="fuente-login" [disabled]="formulario.invalid" type="submit" expand="block" color="success">
+          Iniciar Sesión
+        </ion-button>
+      </ng-template>
+
+    </form>
+
+    <div class="join-login">
+      <span>¿Aún no tienes cuenta?</span> <a routerLink="/register" class="link-login">Únete.</a>
+    </div>
+
+
+  
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="revisaAdd()" color="danger"><ion-icon slot="icon-only" name="add"></ion-icon></ion-button>
+      <ion-button (click)="revisaDelete()" color="danger"><ion-icon slot="icon-only" name="close-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>{{ejercicio.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <ion-card class="carta-detail" color="dark">
+    
+    <img class="carta-imagen-detail" [src]="ejercicio.gif"/>
+
+    <ion-card-header>
+      <ion-card-subtitle>Descripción</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ejercicio.descripcion}}
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>

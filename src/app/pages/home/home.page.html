@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start">My Training </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <ion-card routerLink="/legs" class="carta-home" color="dark">
+    
+    <img class="carta-imagen-home" src="/assets/img/pierna2.jpg"/>
+    
+    <ion-card-header class="ion-no-padding ion-text-center">
+      <ion-card-title class="carta-titulo-home">Piernas</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card routerLink="/abdomen" class="carta-home" color="dark">
+    <img class="carta-imagen-home" src="/assets/img/abdomen1.jpg"/>
+    
+    <ion-card-header class="ion-no-padding ion-text-center"> 
+      <ion-card-title class="carta-titulo-home">Abdomen</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card routerLink="/arms" class="carta-home" color="dark">
+    <img class="carta-imagen-home" src="/assets/img/brazos1.jpg"/>
+
+    <ion-card-header class="ion-no-padding ion-text-center"> 
+      <ion-card-title class="carta-titulo-home">Brazos</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card routerLink="/my-list" class="carta-home" color="dark">
+    <img class="carta-imagen-home" src="/assets/img/mylist.jpg"/>
+
+    <ion-card-header class="ion-no-padding ion-text-center"> 
+      <ion-card-title class="carta-titulo-home">Mi Lista</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

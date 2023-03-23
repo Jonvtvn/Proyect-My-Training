@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start">Brazos</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <ion-card *ngFor="let ejercicio of ejercicios" [routerLink]="['/arms', ejercicio.id, ejercicio.nombre, ejercicio.imagen, ejercicio.gif, ejercicio.descripcion]" class="carta-arms" color="dark">
+    
+    <img class="carta-imagen-arms" [src]="ejercicio.imagen"/>
+    
+    <ion-card-header class="ion-no-padding ion-text-center">
+      <ion-card-title class="carta-titulo-arms">{{ejercicio.nombre}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

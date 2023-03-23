@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start">Mi Lista</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <div *ngIf="ejercicios===null || ejercicios.length==0; else contiene" class="div-my-list">
+    <h1>Su lista no tiene ejercicios.</h1>
+    <img class="img-my-list" src="../assets/art/vacio1.svg">
+  </div>
+
+  <ng-template #contiene>
+    <ion-card *ngFor="let ejercicio of ejercicios" [routerLink]="['/my-list', ejercicio.id, ejercicio.nombre, ejercicio.imagen, ejercicio.gif, ejercicio.descripcion]" class="carta-mylist" color="dark">
+      
+      <img class="carta-imagen-mylist" [src]="ejercicio.imagen"/>
+      
+      <ion-card-header class="ion-no-padding ion-text-center">
+        <ion-card-title class="carta-titulo-mylist">{{ejercicio.nombre}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ng-template>
+
+</ion-content>

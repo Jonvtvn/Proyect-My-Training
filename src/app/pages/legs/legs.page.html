@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start">Piernas</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <ion-card *ngFor="let ejercicio of ejercicios" [routerLink]="['/legs', ejercicio.id, ejercicio.nombre, ejercicio.imagen, ejercicio.gif, ejercicio.descripcion]" class="carta-legs" color="dark">
+    
+    <img class="carta-imagen-legs" [src]="ejercicio.imagen"/>
+    
+    <ion-card-header class="ion-no-padding ion-text-center">
+      <ion-card-title class="carta-titulo-legs">{{ejercicio.nombre}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,43 @@
+.img-imc{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    opacity: 0.7; 
+}
+
+.fuente-imc{
+    font-family: 'JosefinSans-Light';
+}
+
+.form-imc{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ion-button{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.carta-img-imc{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8; 
+}
+
+.carta-imc{
+    border-radius: 7px;
+}
+
+.carta-titulo-imc{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    opacity: 0.95;
+}
+
+.h1-imc{
+    font-size: 40px;
+    font-family: 'JosefinSans';
+}

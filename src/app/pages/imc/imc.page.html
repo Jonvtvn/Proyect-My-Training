@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start">Indice de Masa Corporal</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <img src="/assets/img/imc.jpg" class="img-imc">
+
+  <form class="form-imc" #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <ion-item color="dark">
+      <ion-label class="fuente-imc" position="floating">Edad [0-80]</ion-label>
+      <ion-input class="fuente-imc" type="text" name="age" [(ngModel)]= "imc.age" pattern="^([0-9]{1,2})$" maxlength="2" min="0" max="80" required></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label class="fuente-imc" position="floating">Peso (kg) [40-160]</ion-label>
+      <ion-input class="fuente-imc" type="text" name="weight" [(ngModel)]= "imc.weight" pattern="^([0-9]{1,3})$" maxlength="3" min="40" max="160" required></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label class="fuente-imc" position="floating">Altura (cm) [130-230]</ion-label>
+      <ion-input class="fuente-imc" type="text" name="height" [(ngModel)]= "imc.height" pattern="^([0-9]{1,3})$" maxlength="3" min="130" max="230" required></ion-input>
+    </ion-item>
+
+    
+    <ion-button *ngIf="formulario.invalid; else valido" class="fuente-imc" [disabled]="formulario.invalid" type="submit" expand="block" color="danger">
+      Calcular
+    </ion-button>
+    
+    <ng-template #valido>
+      <ion-button class="fuente-imc" [disabled]="formulario.invalid" type="submit" expand="block" color="success">
+        Calcular
+      </ion-button>
+    </ng-template>
+  </form>
+
+  <br><br>
+
+  <ion-card color="dark" class="carta-imc">
+    <img src="/assets/img/imc1.png" class="carta-img-imc">
+
+    <ion-card-header class="ion-no-padding">
+      <ion-card-title class="ion-text-center carta-titulo-imc">Su Indice de Masa Corporal:</ion-card-title>
+    </ion-card-header>
+        
+    <ion-card-content *ngIf="resultado.bmi == 'NaN'; else correcto" class="ion-text-center">
+      <h1 class="h1-imc" style="color: #ff4961;">Datos Inválidos</h1>
+    </ion-card-content>
+
+    <ng-template #correcto>
+      <ion-card-content class="ion-text-center">
+        <h1 class="h1-imc" style="color: {{resultado.color}}">{{resultado.bmi}}</h1>
+      </ion-card-content>
+    </ng-template>
+
+  </ion-card>
+
+</ion-content>
