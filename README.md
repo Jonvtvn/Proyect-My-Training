@@ -1,8 +1,10 @@
 # Proyect My Training realizado junto a mi compañero Armando Neira.
 
 # My-Training 
-Aplicación móvil para fomentar la actividad física.
-
+Aplicación móvil para fomentar la actividad física en lo cual ==>
+  - Podras ver diferentes ejercicios para tu cuerpo.
+  - Podras calcular tu IMC, es decir tu índice de masa corporal y por ultimo.
+  - Podras tener una lista de tus ejercicios preferidos.
 
 
 
