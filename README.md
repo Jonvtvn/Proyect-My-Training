@@ -1,4 +1,4 @@
-# Proyect My Training realizado con mi companero Armando Neira.
+# Proyect My Training realizado junto a mi compañero Armando Neira.
 
 # My-Training 
 Aplicación móvil para fomentar la actividad física.
