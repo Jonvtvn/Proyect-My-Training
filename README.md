@@ -14,7 +14,7 @@ npm install @ionic/storage
 npm install @ionic/storage-angular
 ```
 
-Una vez realizado esto solo queda levantar el servidor con el siguiente comando:
+Solo queda levantar el servidor escribiendo en la coonsola este comando:
 
 - Navegador
 ```bash
